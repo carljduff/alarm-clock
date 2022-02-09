@@ -1,0 +1,19 @@
+body {
+background-color: #abc4ff;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttondiv {
+    margin: 300px;
+}
+
+.button {
+    padding: 5px;
+}

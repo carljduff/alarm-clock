@@ -76,6 +76,26 @@ if (month < 10) {
 }
     
 
+
+let setAlarm = document.querySelector('.set');
+
+setAlarm.addEventListener('click', function() {
+    let today = new Date();
+    let hourSelect = document.getElementById('alarmhour').value;
+    let minuteSelect = document.getElementById('alarmminute').value;
+    let secondSelect = document.getElementById('alarmseconds').value;
+
+    if ((hourSelect == today.getHours) && (minuteSelect == today.getMinutes) && (secondSelect == today.getSeconds)) {
+            alert('Alarm!');
+    }
+
+});
+
+
+
+
+
+
 /*let alarm = document.getElementById('input').value;
 let set = document.querySelector('.set');
 

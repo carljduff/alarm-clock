@@ -11,7 +11,7 @@ background-color: #abc4ff;
 }
 
 .buttondiv {
-    margin: 300px;
+    margin: 50px;
 }
 
 .button {
@@ -19,5 +19,6 @@ background-color: #abc4ff;
 }
 
 p {
-    
+   text-align: center; 
+   margin: 100px;
 }

@@ -6,14 +6,6 @@ let seconds = today.getSeconds();
 let time = hour + ':' + minute + ":" + seconds; */
 // -----------------------------------------------------
 
-//------------------------- No "0" before time ------------------------
-/*if (hour < 10 || minute < 10 || seconds < 10) {
-    document.getElementById('clock').innerHTML = "0" + hour + ":" + "0" + minute + ":" + "0" + seconds;
-} else {
-    document.getElementById('clock').innerHTML = time;
-};*/
-// ------------------------------------------------------------------------
-
 
 
 
@@ -22,41 +14,67 @@ function twentyFourHour() {
     let hour = today.getHours();
     let minute = today.getMinutes();
     let seconds = today.getSeconds();
-    let time = hour + ':' + minute + ":" + seconds;
+    let amOrPm = "AM"
 
-    if (hour < 10) {
-        document.getElementById('clock').innerHTML = "0" + hour + ":" + minute + ":" + seconds;
-    } else if (minute < 10) {
-        document.getElementById('clock').innerHTML = hour + ":" + "0" + minute + ":" + seconds;
-    } else if (seconds < 10) {
-        document.getElementById('clock').innerHTML = hour + ":" + minute + ":" + "0" + seconds;
-    } else {
-        document.getElementById('clock').innerHTML = time;
+     if (hour > 12) {
+        amOrPm = "PM";
     }
-    setInterval(twentyFourHour, 1000);
+
+    hour = (hour < 10) ? "0" + hour : hour;
+    minute = (minute < 10) ? "0" + minute : minute;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+    
+    let time = hour + ':' + minute + ":" + seconds + " " + amOrPm;
+
+    document.getElementById('clock').innerHTML = time;
+
+
+    if (hourButtonTwelve.disabled = true) {
+        hourButtonTwenty.disabled = false;
+    }
+     setInterval(twentyFourHour, 1000);
+
 };
 
 function twelveHour() {
     let today = new Date();
-    let hour = (today.getHours()) % 12;
+    let hour = today.getHours();
     let minute = today.getMinutes();
     let seconds = today.getSeconds();
-    let time = hour + ':' + minute + ":" + seconds;
-    if (hour < 10) {
-        document.getElementById('clock').innerHTML = "0" + hour + ":" + minute + ":" + seconds;
-    } else if (minute < 10) {
-        document.getElementById('clock').innerHTML = hour + ":" + "0" + minute + ":" + seconds;
-    } else if (seconds < 10) {
-        document.getElementById('clock').innerHTML = hour + ":" + minute + ":" + "0" + seconds;
-    } else {
-        document.getElementById('clock').innerHTML = time;
+    let amOrPm = "AM"
+
+    if (hour === 0) {
+        hour = 12;
     }
+
+    if (hour > 12) {
+        hour = hour - 12;
+        amOrPm = "PM";
+    }
+
+    hour = (hour < 10) ? "0" + hour : hour;
+    minute = (minute < 10) ? "0" + minute : minute;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+    let time = hour + ':' + minute + ":" + seconds + " " + amOrPm;
+
+    document.getElementById('clock').innerHTML = time;
+    
+
+
+
+
+    if (hourButtonTwenty.disabled = true) {
+        hourButtonTwelve.disabled = false;
+    } 
     setInterval(twelveHour, 1000);
  }
 
 
 let hourButtonTwenty = document.querySelector('.twentyfour');
 let hourButtonTwelve = document.querySelector('.twelve')
+
+
 
 hourButtonTwenty.addEventListener('click', twentyFourHour);
 hourButtonTwelve.addEventListener('click', twelveHour);
@@ -69,27 +87,13 @@ let date = month + "-" + day + "-" + year;
 
 if (month < 10) {
    document.getElementById('date').innerHTML = "0" + month + "-" + day + "-" + year;
-} if (day < 10) {
+} else if (day < 10) {
    document.getElementById('date').innerHTML = month + "-" + "0" + day + "-" + year;
 } else {
     document.getElementById('date').innerHTML = date;
 }
     
 
-
-let setAlarm = document.querySelector('.set');
-
-setAlarm.addEventListener('click', function() {
-    let today = new Date();
-    let hourSelect = document.getElementById('alarmhour').value;
-    let minuteSelect = document.getElementById('alarmminute').value;
-    let secondSelect = document.getElementById('alarmseconds').value;
-
-    if ((hourSelect == today.getHours) && (minuteSelect == today.getMinutes) && (secondSelect == today.getSeconds)) {
-            alert('Alarm!');
-    }
-
-});
 
 
 

@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alarm</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <script src="js/main.js" defer></script>
 </head>
 <body>
 
     <div class="display">
-        <p id="date"></p>
-        <p id="clock"></p>
+        <p id="date" class="date"></p>
+        <p id="clock" class="clock"></p>
 
        <div class="toggle">
             <button class="button twelve">12 Hour Clock</button>
@@ -20,10 +20,92 @@
 
        </div>
          
-
-
     </div>
 
+    <!--<div class="alarm">
+        <select name="hour" id="alarmhour">
+            <option value="one">01</option>
+            <option value="two">02</option>
+            <option value="three">03</option>
+            <option value="four">04</option>
+            <option value="five">05</option>
+            <option value="six">06</option>
+            <option value="seven">07</option>
+            <option value="eight">08</option>
+            <option value="nine">09</option>
+            <option value="ten">10</option>
+            <option value="eleven">11</option>
+            <option value="twelve">12</option>
+          </select>
+
+          <select name="minute" id="alarm-minute">
+            <option value="one">01</option>
+            <option value="two">02</option>
+            <option value="three">03</option>
+            <option value="four">04</option>
+            <option value="five">05</option>
+            <option value="six">06</option>
+            <option value="seven">07</option>
+            <option value="eight">08</option>
+            <option value="nine">09</option>
+            <option value="ten">10</option>
+            <option value="eleven">11</option>
+            <option value="twelve">12</option>
+            <option value="thirteen">13</option>
+            <option value="fourteen">14</option>
+            <option value="fifteen">15</option>
+            <option value="sixteen">16</option>
+            <option value="seventeen">17</option>
+            <option value="eighteen">18</option>
+            <option value="nineteen">19</option>
+            <option value="eight">20</option>
+            <option value="nine">21</option>
+            <option value="ten">22</option>
+            <option value="eleven">23</option>
+            <option value="twelve">24</option>
+            <option value="one">25</option>
+            <option value="two">26</option>
+            <option value="three">27</option>
+            <option value="four">28</option>
+            <option value="five">29</option>
+            <option value="six">30</option>
+            <option value="seven">31</option>
+            <option value="eight">32</option>
+            <option value="nine">33</option>
+            <option value="ten">34</option>
+            <option value="eleven">35</option>
+            <option value="twelve">36</option>
+            <option value="one">37</option>
+            <option value="two">38</option>
+            <option value="three">39</option>
+            <option value="four">40</option>
+            <option value="five">41</option>
+            <option value="six">42</option>
+            <option value="seven">43</option>
+            <option value="eight">44</option>
+            <option value="nine">45</option>
+            <option value="ten">46</option>
+            <option value="eleven">47</option>
+            <option value="twelve">48</option>
+            <option value="one">49</option>
+            <option value="two">50</option>
+            <option value="three">51</option>
+            <option value="four">52</option>
+            <option value="five">53</option>
+            <option value="six">54</option>
+            <option value="seven">55</option>
+            <option value="eight">56</option>
+            <option value="nine">57</option>
+            <option value="ten">58</option>
+            <option value="eleven">59</option>
+            
+          </select>
+
+    </div> -->
+    <div id="alarm" class="alarm">
+    <input type="time" id="input">
+    </div>
+    
 
     <div class="container">
         <div class="buttondiv">
@@ -33,6 +115,5 @@
     </div>
     
  
-    <script src="js/main.js"></script>
 </body>
 </html>

@@ -16,6 +16,11 @@ background-color: #abc4ff;
 
 .button {
     padding: 5px;
+    border: 2px solid black;
+    background-color: #D7E3FC;
+    font-size: 20px;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
 p {
@@ -25,4 +30,17 @@ p {
 
 .toggle {
     text-align: center;
+}
+
+.clock {
+    font-size: 100px;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: #C1D3FE;
+}
+
+.alarm {
+    text-align: center;
+    margin-top: 50px;
+    
 }

@@ -52,7 +52,7 @@ function twelveHour() {
         document.getElementById('clock').innerHTML = time;
     }
     setInterval(twelveHour, 1000);
-};
+ }
 
 
 let hourButtonTwenty = document.querySelector('.twentyfour');
@@ -76,7 +76,18 @@ if (month < 10) {
 }
     
 
-// have something to set the alarm
+/*let alarm = document.getElementById('input').value;
+let set = document.querySelector('.set');
+
+set.addEventListener('click', function() {
+    let alarmSelect = document.getElementById("input").select();
+    if (time.value === alarmSelect) {
+        setTimeout();*/
+
+//console.log(document.getElementById("input").select());
+
+
+// have something to set the alarm //
 // have a place to store the alarm
 // get time from clock 
 // hour from alarm needs to check from hour of clock

@@ -91,6 +91,17 @@ let date = month + "-" + day + "-" + year;
 document.getElementById('date').innerHTML = date;
 
     
+let alarm = null;
+
+const {hour, minute, seconds, amOrPm} = document.forms[0];
+
+alarm = twelveHour({
+    hour: hour.value,
+    minute: minute.value,
+    seconds: seconds.value
+});
+
+
 
 
 

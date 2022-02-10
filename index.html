@@ -22,7 +22,7 @@
          
     </div>
 
-    <div class="alarm">
+   <!---<div class="alarm">
         <select name="hour" id="alarmhour">
             <option value="one">01</option>
             <option value="two">02</option>
@@ -162,14 +162,23 @@
             <option value="fiftynine">59</option>
         </select>
 
-    </div> 
+    </div> -->
+<div class="alarm">
+    <input id="hour" type="number" name="hour" max="12" placeholder="Hour">
+    <input id="minute" type="number" name="minute" max= "59" placeholder="Minute">
+    <input id="seconds" type="number" name="seconds" max= "59" placeholder="Second">
+<select class="am-pm" name="am-pm">
+    <option value="AM">AM</option>
+    <option value="PM">PM</option>
+</select>
+</div>
     
     
 
     <div class="container">
         <div class="buttondiv">
-            <button class="button set">Set</button>
-            <button class="button off">Off</button>
+            <button class="button set">Set Alarm</button>
+            <button class="button off">Turn Off</button>
         </div>
     </div>
     

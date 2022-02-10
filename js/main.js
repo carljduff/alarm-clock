@@ -23,7 +23,7 @@ function twentyFourHour() {
     hour = (hour < 10) ? "0" + hour : hour;
     minute = (minute < 10) ? "0" + minute : minute;
     seconds = (seconds < 10) ? "0" + seconds : seconds;
-    
+
     let time = hour + ':' + minute + ":" + seconds + " " + amOrPm;
 
     document.getElementById('clock').innerHTML = time;
@@ -83,15 +83,13 @@ let today = new Date();
 let year = today.getFullYear();
 let month = (today.getMonth() + 1); 
 let day = today.getDate();
-let date = month + "-" + day + "-" + year;
 
-if (month < 10) {
-   document.getElementById('date').innerHTML = "0" + month + "-" + day + "-" + year;
-} else if (day < 10) {
-   document.getElementById('date').innerHTML = month + "-" + "0" + day + "-" + year;
-} else {
-    document.getElementById('date').innerHTML = date;
-}
+
+day = (day < 10) ? "0" + day : day;
+month = (month < 10) ? "0" + month : month;
+let date = month + "-" + day + "-" + year;
+document.getElementById('date').innerHTML = date;
+
     
 
 

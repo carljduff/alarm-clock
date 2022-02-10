@@ -11,9 +11,18 @@ background-color: #abc4ff;
 }
 
 .buttondiv {
-    margin: 300px;
+    margin: 50px;
 }
 
 .button {
     padding: 5px;
+}
+
+p {
+   text-align: center; 
+   margin: 100px;
+}
+
+.toggle {
+    text-align: center;
 }

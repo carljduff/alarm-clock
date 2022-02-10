@@ -6,7 +6,7 @@ let seconds = today.getSeconds();
 let time = hour + ':' + minute + ":" + seconds; */
 // -----------------------------------------------------
 
-function updateTime() {
+function twentyFourHour() {
     let today = new Date();
     let hour = today.getHours();
     let minute = today.getMinutes();
@@ -19,9 +19,12 @@ function updateTime() {
         document.getElementById('clock').innerHTML = time;
     }
 };
-setInterval(updateTime, 1000);
 
-document.getElementById('clock').onload(updateTime());
+
+setInterval(twentyFourHour, 1000);
+document.getElementById('clock').onload(twentyFourHour());
+
+
 
 // -------------------DATE-----------------------
 /*let today = new Date();

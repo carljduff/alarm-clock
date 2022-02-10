@@ -21,19 +21,41 @@ function twentyFourHour() {
     }
     if (seconds < 10) {
         document.getElementById('clock').innerHTML = hour + ":" + minute + ":" + "0" + seconds;
+    } else {
+        document.getElementById('clock').innerHTML = time;
     }
     setInterval(twentyFourHour, 1000);
 };
 
+function twelveHour() {
+    let today = new Date();
+    let hour = (today.getHours()) % 12;
+    let minute = today.getMinutes();
+    let seconds = today.getSeconds();
+    let time = hour + ':' + minute + ":" + seconds;
+    if (hour < 10) {
+        document.getElementById('clock').innerHTML = "0" + hour + ":" + minute + ":" + seconds;
+    }
+    if (minute < 10) {
+        document.getElementById('clock').innerHTML = hour + ":" + "0" + minute + ":" + seconds;
+    }
+    if (seconds < 10) {
+        document.getElementById('clock').innerHTML = hour + ":" + minute + ":" + "0" + seconds;
+    } else {
+        document.getElementById('clock').innerHTML = time;
+    }
+    setInterval(twelveHour, 1000);
+};
+
+
+let hourButtonTwenty = document.querySelector('.twentyfour');
+let hourButtonTwelve = document.querySelector('.twelve')
+
+hourButtonTwenty.addEventListener('click', twentyFourHour);
+hourButtonTwelve.addEventListener('click', twelveHour);
 
 
 
-
-//document.getElementById('clock').onload(twentyFourHour());
-
-let twelveHourButton = document.querySelector('.twelve');
-
-twelveHourButton.addEventListener('click', twentyFourHour());
 
 // -------------------DATE-----------------------
 /*let today = new Date();

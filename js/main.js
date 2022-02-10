@@ -14,6 +14,9 @@ let time = hour + ':' + minute + ":" + seconds; */
 };*/
 // ------------------------------------------------------------------------
 
+
+
+
 function twentyFourHour() {
     let today = new Date();
     let hour = today.getHours();
@@ -58,25 +61,32 @@ let hourButtonTwelve = document.querySelector('.twelve')
 hourButtonTwenty.addEventListener('click', twentyFourHour);
 hourButtonTwelve.addEventListener('click', twelveHour);
 
-
-
-
-// -------------------DATE-----------------------
-/*let today = new Date();
+let today = new Date();
 let year = today.getFullYear();
 let month = (today.getMonth() + 1); 
 let day = today.getDate();
-let date = month + "-" + day + "-" + year;*/
-//-------------------------------------------------------
+let date = month + "-" + day + "-" + year;
 
-
-// --------------No "0" before Month/Day----------------------- 
-/*if (month < 10 || day < 10) {
-    document.getElementById('date').innerHTML = "0" + month + "-" + "0" + day + "-" + year;
+if (month < 10) {
+   document.getElementById('date').innerHTML = "0" + month + "-" + day + "-" + year;
+} if (day < 10) {
+   document.getElementById('date').innerHTML = month + "-" + "0" + day + "-" + year;
 } else {
     document.getElementById('date').innerHTML = date;
-};*/
-// -----------------------------------------------------------------
+}
+    
+
+// have something to set the alarm
+// have a place to store the alarm
+// get time from clock 
+// hour from alarm needs to check from hour of clock
+// minute from alarm needs to check from minute of clock
+// seconds from alarm needs to check from seconds of clock
+// alert when the alarm goes off
+// hour, minute, second needs to tie into clock/set alarm button
+
+
+
 
 
 

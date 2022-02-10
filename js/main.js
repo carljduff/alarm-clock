@@ -13,13 +13,18 @@ function twentyFourHour() {
     let seconds = today.getSeconds();
     let time = hour + ':' + minute + ":" + seconds;
 
-    if (hour < 10 || minute < 10 || seconds < 10) {
-        document.getElementById('clock').innerHTML = "0" + hour + ":" + "0" + minute + ":" + "0" + seconds;
-    } else {
-        document.getElementById('clock').innerHTML = time;
+    if (hour < 10) {
+        document.getElementById('clock').innerHTML = "0" + hour + ":" + minute + ":" + seconds;
+    }
+    if (minute < 10) {
+        document.getElementById('clock').innerHTML = hour + ":" + "0" + minute + ":" + seconds;
+    }
+    if (seconds < 10) {
+        document.getElementById('clock').innerHTML = hour + ":" + minute + ":" + "0" + seconds;
     }
     setInterval(twentyFourHour, 1000);
 };
+
 
 
 

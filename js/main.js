@@ -18,13 +18,17 @@ function twentyFourHour() {
     } else {
         document.getElementById('clock').innerHTML = time;
     }
+    setInterval(twentyFourHour, 1000);
 };
 
 
-setInterval(twentyFourHour, 1000);
-document.getElementById('clock').onload(twentyFourHour());
 
 
+//document.getElementById('clock').onload(twentyFourHour());
+
+let twelveHourButton = document.querySelector('.twelve');
+
+twelveHourButton.addEventListener('click', twentyFourHour());
 
 // -------------------DATE-----------------------
 /*let today = new Date();

@@ -1,59 +1,51 @@
-body {
-background-color: #abc4ff;
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
 
+body {
+  background-color: #abc4ff;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.set-alarm {
+  text-align: center;
+  margin-top: 50px;
 }
 
 .buttondiv {
-    margin: 50px;
+  margin: 50px;
 }
 
-.button {
-    padding: 5px;
-    border: 2px solid black;
-    background-color: #D7E3FC;
-    font-size: 20px;
-    border-radius: 15px;
-    cursor: pointer;
+.link {
+  padding: 5px;
+  border: 2px solid black;
+  background-color: #d7e3fc;
+  font-size: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  color: black;
 }
 
 p {
-   text-align: center; 
-   margin: 100px;
+  text-align: center;
+  margin: 100px;
+  font-family: "Orbitron", sans-serif;
 }
 
-.toggle {
-    text-align: center;
+.switch {
+  text-align: center;
 }
 
 .clock {
-    font-size: 100px;
-    border: 1px solid black;
-    border-radius: 50px;
-    background-color: #C1D3FE;
-}
-
-.date {
-    font-size: 50px;
-    color:crimson;
-    
+  font-size: 100px;
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: #c1d3fe;
 }
 
 .alarm {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 0px;
-    
-    
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0px;
 }
 
-#hour, #minute, #seconds {
-    width: 70px;
-    text-align: center;
+a {
+  text-decoration: none;
 }

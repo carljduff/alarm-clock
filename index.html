@@ -5,37 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alarm</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
 
     <div class="display">
         <p id="date" class="date"></p>
         <p id="clock" class="clock"></p>
+    
 
-       <div class="toggle">
-            <button class="button twelve">12 Hour Clock</button>
-            <button class="button twentyfour">24 Hour Clock</button>
+       <div class="switch">
+
+            <a href="one.html" class="link twentyfour">24 Hour Clock</a>
        </div>   
     </div>
 
    
 <form class="alarm">
-    <input id="hour" type="number" name="hour" max="12" placeholder="Hour">
-    <input id="minute" type="number" name="minute" max= "59" placeholder="Minute">
-    <input id="seconds" type="number" name="seconds" max= "59" placeholder="Second">
+    <input type="datetime-local" onchange="retrieveTime();" id="alarm" name="alarm" max="12" placeholder="Hour">
+    
 </form>
     
     
 
-    <div class="container">
-        <div class="buttondiv">
-            <button class="button set" id="set">Set Alarm</button>
-            <button class="button off">Turn Off</button>
-        </div>
+    <div class="set-alarm">
+            <button onclick="setAlarm();" class="button link set" id="set">Set Alarm</button>
+            
     </div>
     
  
 </body>
-</html>
+</html> 
+
+
+

@@ -10,7 +10,7 @@ function currentTime() {
     let minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
     let seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
     time = hours + ":" + minutes + ":" + seconds + " " + meridiem;
-    let display = document.getElementById("clock");
+    let clock = document.getElementById("clock");
     clock.innerHTML = time;
 };
 

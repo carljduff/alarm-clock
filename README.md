@@ -1,1 +1,1 @@
-# alarm-clock
+An alarm clock project.

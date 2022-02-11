@@ -1,99 +1,45 @@
-let today = new Date();
-let year = today.getFullYear();
-let month = (today.getMonth() + 1); 
-let day = today.getDate();
-day = (day < 10) ? "0" + day : day;
-month = (month < 10) ? "0" + month : month;
-let date = month + "-" + day + "-" + year;
-document.getElementById('date').innerHTML = date;
+let alarmTime = null;
+let alarmEnd = null;
 
 
-function twentyFourHour() {
-    let today = new Date();
-    let hour = today.getHours();
-    let minute = today.getMinutes();
-    let seconds = today.getSeconds();
-    let amOrPm = "AM"
+function currentTime() {
+    let date = new Date();
+    let hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
+    let meridiem = date.getHours() >= 12 ? "PM" : "AM";
+    hours = hours < 10 ? "0" + hours : hours;
+    let minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+    let seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+    time = hours + ":" + minutes + ":" + seconds + " " + meridiem;
+    let display = document.getElementById("clock");
+    clock.innerHTML = time;
+};
 
-     if (hour > 12) {
-        amOrPm = "PM";
-    }
-
-    hour = (hour < 10) ? "0" + hour : hour;
-    minute = (minute < 10) ? "0" + minute : minute;
-    seconds = (seconds < 10) ? "0" + seconds : seconds;
-
-    let time = hour + ':' + minute + ":" + seconds + " " + amOrPm;
-
-    document.getElementById('clock').innerHTML = time;
+setInterval(currentTime, 1000);
 
 
-    if (hourButtonTwelve.disabled = true) {
-        hourButtonTwenty.disabled = false;
-    }
-     setInterval(twentyFourHour, 1000);
+
+function retrieveTime() {
+    alarmTime = document.getElementById('alarm').value;
 
 };
 
-function twelveHour() {
-    let today = new Date();
-    let hour = today.getHours();
-    let minute = today.getMinutes();
-    let seconds = today.getSeconds();
-    let amOrPm = "AM"
+function alarmMessage() {
+    alert('Alarm!');
+};
 
-    if (hour === 0) {
-        hour = 12;
+function setAlarm() {
+    if(alarmTime) {
+        let currentTime = new Date();
+        let alertTime = new Date(alarmTime);
+
+    if (alertTime > currentTime) {
+        let timeout = alertTime.getTime() - currentTime.getTime();
+        alarmEnd = setTimeout(alarmMessage, timeout);
+        alert("Alarm Set!")
+    
+    }
     }
 
-    if (hour > 12) {
-        hour = hour - 12;
-        amOrPm = "PM";
-    }
-
-    hour = (hour < 10) ? "0" + hour : hour;
-    minute = (minute < 10) ? "0" + minute : minute;
-    seconds = (seconds < 10) ? "0" + seconds : seconds;
-
-    let time = hour + ':' + minute + ":" + seconds + " " + amOrPm;
-
-    document.getElementById('clock').innerHTML = time;
-    
-
-
-
-
-    if (hourButtonTwenty.disabled = true) {
-        hourButtonTwelve.disabled = false;
-    } 
-    setInterval(twelveHour, 1000);
-    
- }
-
-
-let hourButtonTwenty = document.querySelector('.twentyfour');
-let hourButtonTwelve = document.querySelector('.twelve')
-hourButtonTwenty.addEventListener('click', twentyFourHour);
-hourButtonTwelve.addEventListener('click', twelveHour);
-
-
-
-    
-
-
-
-// have something to set the alarm //
-// have a place to store the alarm
-// get time from clock 
-// hour from alarm needs to check from hour of clock --- 
-// minute from alarm needs to check from minute of clock:
-// seconds from alarm needs to check from seconds of clock
-// alert when the alarm goes off
-// hour, minute, second needs to tie into clock/set alarm button
-
-
-
-
-
+};
 
 

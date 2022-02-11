@@ -1,4 +1,3 @@
-// doesn't have value yet, but will later.
 let alarmTime = null; 
 let alarmEnd = null; 
 

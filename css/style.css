@@ -35,9 +35,13 @@ p {
 
 .clock {
   font-size: 100px;
-  border: 1px solid #33658a;
+  border: 3px solid #33658a;
   border-radius: 50px;
   background-color: #c1d3fe;
+  margin: auto;
+  margin-bottom: 50px;
+  max-width: 500px;
+  text-align: center;
 }
 
 .alarm {

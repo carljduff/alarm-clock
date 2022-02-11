@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/one.js" defer></script>
+</head>
+<body>
+
+    <div class="display">
+        <p id="date" class="date"></p>
+        <p id="clock" class="clock"></p>
+        
+
+       <div class="switch">
+            <a href="index.html" class="link twelve">12 Hour Clock</a>
+        
+       </div>   
+    </div>
+
+   
+<form class="alarm">
+    <input type="datetime-local" onchange="retrieveTime();" id="alarm" name="alarm" max="12" placeholder="Hour">
+    
+</form>
+    
+    
+
+    <div class="set-alarm">
+            <button onclick="setAlarm();" class="button link set" id="set">Set Alarm</button>
+            
+    </div>
+    
+ 
+</body>
+</html> 
+

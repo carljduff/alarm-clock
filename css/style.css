@@ -39,8 +39,21 @@ p {
     background-color: #C1D3FE;
 }
 
+.date {
+    font-size: 50px;
+    color:crimson;
+    
+}
+
 .alarm {
     text-align: center;
     margin-top: 50px;
+    font-size: 0px;
     
+    
+}
+
+#hour, #minute, #seconds {
+    width: 70px;
+    text-align: center;
 }

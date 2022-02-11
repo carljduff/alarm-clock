@@ -1,12 +1,11 @@
-// -------------------TIME-----------------------------
-/*let today = new Date();
-let hour = today.getHours();
-let minute = today.getMinutes();
-let seconds = today.getSeconds();
-let time = hour + ':' + minute + ":" + seconds; */
-// -----------------------------------------------------
-
-
+let today = new Date();
+let year = today.getFullYear();
+let month = (today.getMonth() + 1); 
+let day = today.getDate();
+day = (day < 10) ? "0" + day : day;
+month = (month < 10) ? "0" + month : month;
+let date = month + "-" + day + "-" + year;
+document.getElementById('date').innerHTML = date;
 
 
 function twentyFourHour() {
@@ -68,63 +67,26 @@ function twelveHour() {
         hourButtonTwelve.disabled = false;
     } 
     setInterval(twelveHour, 1000);
+    
  }
 
 
 let hourButtonTwenty = document.querySelector('.twentyfour');
 let hourButtonTwelve = document.querySelector('.twelve')
-
-
-
 hourButtonTwenty.addEventListener('click', twentyFourHour);
 hourButtonTwelve.addEventListener('click', twelveHour);
 
-let today = new Date();
-let year = today.getFullYear();
-let month = (today.getMonth() + 1); 
-let day = today.getDate();
 
-
-day = (day < 10) ? "0" + day : day;
-month = (month < 10) ? "0" + month : month;
-let date = month + "-" + day + "-" + year;
-document.getElementById('date').innerHTML = date;
 
     
-let alarm = null;
 
-const {hour, minute, seconds, amOrPm} = document.forms[0];
-
-alarm = twelveHour({
-    hour: hour.value,
-    minute: minute.value,
-    seconds: seconds.value
-});
-
-
-
-
-
-
-
-
-
-/*let alarm = document.getElementById('input').value;
-let set = document.querySelector('.set');
-
-set.addEventListener('click', function() {
-    let alarmSelect = document.getElementById("input").select();
-    if (time.value === alarmSelect) {
-        setTimeout();*/
-
-//console.log(document.getElementById("input").select());
 
 
 // have something to set the alarm //
 // have a place to store the alarm
 // get time from clock 
-// hour from alarm needs to check from hour of clock
-// minute from alarm needs to check from minute of clock
+// hour from alarm needs to check from hour of clock --- 
+// minute from alarm needs to check from minute of clock:
 // seconds from alarm needs to check from seconds of clock
 // alert when the alarm goes off
 // hour, minute, second needs to tie into clock/set alarm button
